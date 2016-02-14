@@ -5,8 +5,8 @@
 	<Page title="{i18n>homePageTitle}">
 		<headerContent>
 			<Button
-					icon="sap-icon://hello-world"
-					press="onOpenDialog"/>
+					icon="sap-icon://calendar"
+					press="onOpenCalendar"/>
 		</headerContent>
 		<content>
 			<mvc:XMLView viewName="sap.ui.lund.timesheet.view.TimesheetList"/>

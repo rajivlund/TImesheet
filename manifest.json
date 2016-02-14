@@ -81,6 +81,11 @@
 		  "pattern": "detail/{timeitemPath}",
 		  "name": "detail",
 		  "target": "detail"
+		},
+		{
+		  "pattern": "calendar",
+		  "name": "calendar",
+		  "target": "calendar"
 		}
 	  ],
 	  "targets": {
@@ -89,6 +94,9 @@
 		},
 		"detail": {
 		  "viewName": "Detail"
+		},
+		"calendar": {
+		  "viewName": "Calendar"
 		}
 	  }
 	}
