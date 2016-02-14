@@ -1,0 +1,44 @@
+<mvc:View
+	controllerName="sap.ui.lund.timesheet.controller.Detail"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+    xmlns:l="sap.ui.layout">
+		<Page
+				title="{i18n>detailPageTitle}"> 
+				<ObjectHeader
+					intro="{timesheet>Project}"
+					title="{timesheet>Description}"/>
+				<l:VerticalLayout class="sapUiContentPadding"
+                                  width="100%">               
+                <Input
+                    value="{timesheet>Description}"
+                    valueLiveUpdate = "true"
+                    width="60%"
+                    placeholder="{i18n>enter_description}"   />
+                            
+                <Text
+				text="Duration {timesheet>Duration} hour(s)"
+				class ="sapUiSmallMargin sapThemeHighlight-asColor myCustomText"/>
+                <Text
+				text="Mock-Duration {/exampleInteger} hour(s)"
+				class ="sapUiSmallMargin sapThemeHighlight-asColor myCustomText"/>
+                <Slider 
+                    value="{timesheet>Duration}"
+                    width="60%"
+                    class="sapUiSmallMarginBottom"
+                    min="0"
+                    max="10"
+                    step="0.5"/>
+                </l:VerticalLayout> 
+                <Button type="Accept"
+                            text="{i18n>button_save}"
+                            class="sapUiSmallMarginBottom"
+                            press="onSave"
+                                />
+                <Button type="Reject"
+                            text="{i18n>button_cancel}"
+                            class="sapUiSmallMarginBottom"
+                            press="onCancel"
+                                />
+        </Page>
+</mvc:View>

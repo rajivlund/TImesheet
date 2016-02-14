@@ -1,0 +1,44 @@
+<mvc:View
+	controllerName="sap.ui.lund.timesheet.controller.TimesheetList"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc">
+	<List
+	  id="timesheetList"
+	  headerText="{i18n>timesheetListTitle}"
+	  class="sapUiResponsiveMargin"
+	  width="auto"
+	  items="{
+	  
+		path : 'timesheet>/Timesheet',
+		sorter : {
+			path : 'Date',
+			type: 'sap.ui.model.type.Date',
+			group : true
+		}
+		
+	  }" >
+      <headerToolbar>
+         <Toolbar>
+            <Title text="{i18n>timesheetListTitle}"/>
+            <ToolbarSpacer/>
+            <SearchField width="50%" search="onFilterTimesheet"/>
+         </Toolbar>
+      </headerToolbar>
+	  <items>
+			<ObjectListItem
+				title="{timesheet>Project} - {timesheet>Description}"
+				number="{timesheet>Duration}"
+				numberUnit="{view>/duration}"
+				numberState="{= ${timesheet>Duration} > 6 ? 'Error' : 'Success' }"
+				type="Navigation"
+				press="onPress">
+					<firstStatus>
+						<ObjectStatus text="{
+							path: 'timesheet>Status',
+							formatter: '.formatter.statusText'
+						}"/>
+					</firstStatus>
+			</ObjectListItem>
+	  </items>
+	</List>
+</mvc:View>

@@ -1,0 +1,25 @@
+{
+  "Timesheet": [
+	{
+	  "Project": "OpenUI5 Tutorial",
+	  "Date": "2015-11-01",
+	  "Duration": 4.5,
+	  "Description": "Creation of index.html",
+	  "Status": "A"
+	},
+	{
+	  "Project": "OpenUI5 Tutorial",
+	  "Date": "2015-11-02",
+	  "Duration": 8.0,
+	  "Description": "Creation of views",
+	  "Status": "B"
+	},
+	{
+	  "Project": "OpenUI5 Tutorial",
+	  "Date": "2015-11-03",
+	  "Duration": 6.0,
+	  "Description": "Creation of controllers",
+	  "Status": "C"	  
+	}
+  ]
+}

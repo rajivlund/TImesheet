@@ -1,0 +1,13 @@
+.lundTimesheet .myCustomButton.sapMBtn {
+   margin-right: 0.125rem;
+}
+.lundTimesheet .myCustomText {
+   font-weight: bold;
+}
+/*  ProductRating */
+.lundTimesheetProductRating {
+	padding: 0.75rem;
+}
+.lundTimesheetProductRating .sapMRI {
+	vertical-align: initial;
+}

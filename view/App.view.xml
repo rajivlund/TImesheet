@@ -1,0 +1,7 @@
+<mvc:View
+	controllerName="sap.ui.lund.timesheet.controller.App"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true">
+	<App class="lundTimesheet" id="app" />
+</mvc:View>
