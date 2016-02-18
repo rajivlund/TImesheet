@@ -10,17 +10,24 @@
 				id="PC1"
 				startDate="{path: '/startDate'}"
 				rows="{path: '/people'}"
+				viewKey="Day"
 				appointmentSelect="handleAppointmentSelect">
 				<toolbarContent>
 					<Title text="Title" titleStyle="H4"/>
 				</toolbarContent>
+				<views>
+ 					<PlanningCalendarView description="Hour" key="Hour" intervalType="Hour" showSubIntervals="true" />
+					<PlanningCalendarView description="Day" key="Day" intervalType="Day" showSubIntervals="true" />
+					<PlanningCalendarView description="Month" key="Month" intervalType="Month" showSubIntervals="true" />
+				</views>
 				<rows>
 					<PlanningCalendarRow
 						icon="{pic}"
 						title="{name}"
 						text="{role}"
 						appointments="{appointments}"
-						intervalHeaders="{headers}">
+						intervalHeaders="{headers}"
+						nonWorkingHours="{pause}">
 						<appointments>
 							<unified:CalendarAppointment
 								startDate="{start}"

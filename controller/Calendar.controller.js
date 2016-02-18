@@ -17,6 +17,7 @@ sap.ui.define([
 									pic: "sap-icon://employee",
 									name: "Max Mustermann",
 									role: "team member",
+									pause: [10, 11, 12, 13],
 									appointments: [
 									               {
 									              	 start: new Date("2015", "11", "15", "10", "0"),

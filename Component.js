@@ -15,7 +15,7 @@ sap.ui.define([
 			// call the init function of the parent
 			UIComponent.prototype.init.apply(this, arguments);
 
-			// set data model
+			// set dummy data model
 			var oData = {
 				recipient : {
 					name : "World"
@@ -23,8 +23,12 @@ sap.ui.define([
                 exampleInteger : 5
 			};
 			var oModel = new JSONModel(oData);
-            oModel.setDefaultBindingMode(sap.ui.model.BindingMode.TwoWay);
 			this.setModel(oModel);
+			
+			// Change the oData Model Binding Mode to TwoWay
+			var oTimesheet = this.getModel("timesheet");
+			oTimesheet.setDefaultBindingMode(sap.ui.model.BindingMode.TwoWay);
+			this.setModel(oTimesheet);
 			
 			//Delete: Create Model for Timesheet Items - Locally
 			//var oConfig = this.getMetadata().getConfig();
